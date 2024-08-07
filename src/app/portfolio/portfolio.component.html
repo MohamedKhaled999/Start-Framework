@@ -1,0 +1,25 @@
+<div class=" flex justify-center text-mainColor py-6">
+  <div class="text-center container  px-3 ">
+    <h2 class="text-[38px] font-bold uppercase">portfolio component
+    </h2>
+    <div class="flex gap-2 justify-center items-center pt-2 pb-4">
+      <div class="w-20 h-1 bg-mainColor"></div>
+      <i class="fa-solid fa-star"></i>
+      <div class="w-20 h-1 bg-mainColor"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-8">
+        @for ( image of fakeImages; track $index) {
+            <app-card (itemEvent)="showImage($event)">
+                <img class="w-full" [src]="image" alt="photo">
+            </app-card>
+        }
+    </div>
+  </div>
+</div>
+
+@if(isShow){
+    <div #layer class="w-full fixed bg-blue-500/25 inset-0 z-[100] flex justify-center items-center" (click)="closeShow($event)">
+        <img class=" w-[600px]" [src]="imagePath" alt="image preview">
+    </div>
+}

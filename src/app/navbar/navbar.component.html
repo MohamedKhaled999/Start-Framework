@@ -1,0 +1,64 @@
+<nav #myNav class="bg-mainColor z-50 sticky top-0 w-full py-6 transition-all duration-1000" (window:scroll)="onScroll()">
+  <div class="mx-auto container px-3">
+    <div class="flex h-16 items-center">
+      <div class="flex items-center font-bold w-full">
+        <!-- logo -->
+        <div class="flex flex-shrink-0 items-center ">
+          <h1 class="text-white text-[calc(1.3125rem+.9vw)]  uppercase"  >
+            <a routerLink="home">Start Framework</a>
+          </h1>
+        </div>
+
+        <button
+          type="button"
+          role="checkbox"
+          class=" ring-1 ring-slate-800 peer/toggle sm:hidden end-3 absolute inline-flex items-center justify-center rounded-md px-3 py-2 text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-inset focus:ring-black"
+          aria-controls="mobile-menu"
+          aria-checked="false"
+          (click)="showLinks()"
+        >
+          <svg
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="rgba(0, 0, 0, 0.65)"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+        </button>
+        <!-- links -->
+        <div #myLinks
+          class=" h-0 sm:h-fit overflow-hidden z-50 absolute sm:static top-full start-0 sm:ps-2 bg-mainColor sm:block w-full transition-all duration-1000"
+        >
+          <div 
+            class=" pb-2 ps-2 sm:p-0   gap-3  sm:ms-auto w-fit flex flex-col sm:flex-row justify-stretch"
+          >
+            <a
+              class=" px-3 py-2 text-[16px] w-fit  text-white uppercase  transition-all duration-500 "
+              aria-current="page"
+              routerLink="about" routerLinkActive="bg-wiredGreen rounded-lg" 
+              >About</a
+            >
+            <a class=" px-3 py-2 text-[16px] w-fit text-white uppercase"
+            routerLink="portfolio" routerLinkActive="bg-wiredGreen rounded-lg" 
+            >Portfolio</a>
+            <a class=" px-3 py-2 text-[16px] w-fit  text-white uppercase transition-all duration-500"
+            routerLink="contact" routerLinkActive="bg-wiredGreen rounded-lg" 
+            >Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

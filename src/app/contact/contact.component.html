@@ -1,0 +1,30 @@
+<div class=" flex  justify-center text-mainColor pt-6">
+    <div class="text-center container px-3">
+      <h2 class="text-[38px] font-bold uppercase">conatct section
+      </h2>
+      <div class="flex gap-2 justify-center items-center pt-2 pb-4">
+        <div class="w-20 h-1 bg-mainColor"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="w-20 h-1 bg-mainColor"></div>
+      </div>  
+    </div>
+
+ 
+  </div>
+  <form action="" class="flex flex-col gap-2 text-start mx-auto md:w-1/2 mt-9 px-3 pb-6" (submit) = "$event.preventDefault()">
+    <label for="userName" class="text-wiredGreen relative top-10 -z-10 transition-all duration-700 mb-1">userName :</label>
+    <input placeholder="userName" id="userName" name="userName" type="text" class="py-4 px-3 rounded border-b-2 focus:outline-none  " (input)="onInput($event)" 
+    >
+    <label for="userAge" class="text-wiredGreen relative top-10 -z-10 transition-all duration-700 mb-1">userAge :</label>
+    <input placeholder="userAge" id="userAge" name="userAge" type="number" class="py-4 px-3 rounded border-b-2 focus:outline-none  " (input)="onInput($event)" 
+    >
+    <label for="userEmail" class="text-wiredGreen relative top-10 -z-10 transition-all duration-700 mb-1">userEmail:</label>
+    <input placeholder="userEmail" id="userEmail" name="userEmail" type="email" class="py-4 px-3 rounded border-b-2 focus:outline-none  " (input)="onInput($event)" 
+    >
+    <label for="userPassword" class="text-wiredGreen relative top-10 -z-10 transition-all duration-700 mb-1">userPassword :</label>
+    <input placeholder="userPassword" id="userPassword" name="userPassword" type="password" class="py-4 px-3 rounded border-b-2 focus:outline-none  " (input)="onInput($event)" 
+    >
+
+    <button class="bg-wiredGreen rounded-md px-3 py-2 mt-3 w-fit text-white">send Massage</button>
+    
+</form>
